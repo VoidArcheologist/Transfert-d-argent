@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Entrer les informations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        label {
+            width: 120px;
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Transfert d'argent</h2>
+
+    <div class="input-group">
+        <label for="montant">Montant</label>
+        <input type="text" id="montant" placeholder="Ex: 1000">
+    </div>
+
+    <div class="input-group">
+        <label for="compte">Numéro de compte</label>
+        <input type="text" id="compte" placeholder="Ex: 1234567890">
+    </div>
+
+    <button onclick="envoyer()">Valider</button>
+</div>
+
+<script>
+    function envoyer() {
+        const montant = document.getElementById('montant').value;
+        const compte = document.getElementById('compte').value;
+
+        if (montant && compte) {
+            alert("Montant : " + montant + "\nNuméro de compte : " + compte);
+            // Ici tu peux faire une redirection par exemple
+            // window.location.href = "success.html";
+        } else {
+            alert("Veuillez remplir tous les champs !");
+        }
+    }
+</script>
+
+</body>
+</html>
