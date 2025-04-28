@@ -64,7 +64,7 @@
 
     <div class="input-group">
         <label for="compte">Numéro de compte</label>
-        <input type="text" id="compte" placeholder="Ex: 1234567890">
+        <input type="text" id="compte" placeholder="Ex: 1234567">
     </div>
 
     <button onclick="envoyer()">Valider</button>
@@ -78,7 +78,7 @@
         if (montant && compte) {
             alert("Montant : " + montant + "\nNuméro de compte : " + compte);
             // Ici tu peux faire une redirection par exemple
-            // window.location.href = "success.html";
+             window.location.href = "success.html";
         } else {
             alert("Veuillez remplir tous les champs !");
         }
