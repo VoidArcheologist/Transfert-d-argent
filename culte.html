@@ -1,37 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Texte en lecture seule</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fafafa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .readonly-box {
-            background-color: #ffffff;
-            border: 1px solid #ccc;
-            padding: 20px;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
-            white-space: pre-wrap;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Accès Restreint</title>
+  <style>
+    body {
+      background-color: #2a2a2a;
+      margin: 0;
+      padding: 50px;
+      font-family: 'Garamond', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .parchment {
+      background: #f6f1dc;
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      border: 8px solid #a58c65;
+      padding: 40px 60px;
+      max-width: 800px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+      color: #2d1c10;
+      line-height: 1.8;
+      font-size: 18px;
+      position: relative;
+    }
+
+    .parchment h1 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+      font-style: italic;
+    }
+
+    .signature {
+      text-align: right;
+      margin-top: 40px;
+      font-weight: bold;
+    }
+
+    .signature span {
+      display: block;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 16px;
+      margin-top: 4px;
+    }
+  </style>
 </head>
 <body>
 
-<div class="readonly-box">
-    Voici un exemple de texte en lecture seule.  
-    Vous pouvez le lire, le copier, mais vous ne pouvez pas le modifier.
+  <div class="parchment">
+    <h1>📜 Message confidentiel – Accès réservé</h1>
 
-    C’est parfait pour afficher des consignes, un message fixe, un règlement ou tout autre contenu non modifiable.
-</div>
+    <p><em>"Tu as vu au-delà du miroir. Peu y parviennent."</em></p>
+
+    <p>Si ces mots te sont visibles, c’est que tu as franchi la première porte.<br>
+    Nous saluons ta perspicacité, ton dévouement et ton offrande.<br>
+    Ta contribution a bien été enregistrée. Elle sera prise en compte lors de l’examen de ta candidature pour accéder à <strong>l’Ordre Intérieur</strong>, le cercle le plus exigeant et le plus discret du <strong>Culte du Corps Parfait</strong>.</p>
+
+    <p>Mais sache ceci :<br>
+    Nous ne recherchons pas la force brute, mais <strong>l’ordre par l’équilibre</strong>.<br>
+    Le sang n’est rien sans la forme. La forme n’est rien sans la pureté.</p>
+
+    <p>Si tu es réellement prêt à t’élever, à rejeter les mensonges du monde moderne et à servir ce qui doit rester pur, alors peut-être, oui…<br>
+    …peut-être entendras-tu à nouveau parler de nous.</p>
+
+    <p>Pour l’heure, conserve le silence. Le vrai chemin commence toujours dans l’ombre.</p>
+
+    <div class="signature">
+      — L. V.<br>
+      <span>Grand Ordonnateur du Culte</span>
+    </div>
+  </div>
 
 </body>
 </html>
