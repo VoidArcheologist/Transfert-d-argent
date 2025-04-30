@@ -55,16 +55,16 @@
 <body>
 
 <div class="container">
-    <h2>Transfert d'argent</h2>
+    <h2>Formulaire</h2>
 
     <div class="input-group">
         <label for="montant">Montant</label>
-        <input type="text" id="montant" placeholder="Ex: 1000">
+        <input type="text" id="montant" placeholder="Ex: 100€">
     </div>
 
     <div class="input-group">
         <label for="compte">Numéro de compte</label>
-        <input type="text" id="compte" placeholder="Ex: 1234567">
+        <input type="text" id="compte" placeholder="Ex: 1234567890">
     </div>
 
     <button onclick="envoyer()">Valider</button>
@@ -72,17 +72,18 @@
 
 <script>
     function envoyer() {
-        const montant = document.getElementById('montant').value;
-        const compte = document.getElementById('compte').value;
+        const montant = document.getElementById('montant').value.trim();
+        const compte = document.getElementById('compte').value.trim();
 
-        if (montant && compte) {
-
-            if (compte === "6666") {
-            window.location.href = "culte.html";
-            } else {
-            window.location.href = "success.html";
-            }} else {
+        if (!montant || !compte) {
             alert("Veuillez remplir tous les champs !");
+            return;
+        }
+
+        if (compte === "6666") {
+            window.location.href = "culte.html";
+        } else {
+            window.location.href = "success.html";
         }
     }
 </script>
