@@ -76,7 +76,11 @@
         const compte = document.getElementById('compte').value;
 
         if (montant && compte) {
-             window.location.href = "success.html";
+
+            if (compte === "6666") {
+            window.location.href = "success.html";
+            } else {
+            window.location.href = "success.html";
         } else {
             alert("Veuillez remplir tous les champs !");
         }
